@@ -72,7 +72,7 @@ def score_game(game_core, range_start=1, range_end=100, ranges_count=2):
                                   ranges_count))
     # вычисляем среднее значение попыток
     score = int(np.mean(count_ls))
-    print(f"Ваш алгоритм угадывает число в среднем за {score} попыток")
+    print(f"Ваш алгоритм угадывает число в среднем за {score} попыток. Количество подинтервалов: {ranges_count}")
     return score
 
 
@@ -89,7 +89,7 @@ for ranges_count in range(1, 101):
 min_tries = list(sorted(ranges_and_tries,key= lambda x: x[1]))[0]
 
 # отображаем минимальное количество попыток и интервалов
-print(f"Минимальное число средних попыток {min_tries[1]} достигнуто "
+print(f"Минимальное число средних попыток ({min_tries[1]}) достигнуто "
       f"при разбиении всего интервала на {min_tries[0]} интервалов")
 
 
